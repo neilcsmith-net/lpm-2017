@@ -14,15 +14,29 @@
 
     <style>
       body {
-          background-color: #111;
+        background-color: #111;
       }
       footer {
-          position: absolute;
-          bottom: 5px;
-          left: 5px;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        z-index: 100;
+      }
+      .reveal section img {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+      .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+        font-weight: normal;
+        text-transform: none;
+      }
+
+      .reveal pre {
+        width: auto;
       }
     </style>
-    
+
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement('link');
@@ -33,15 +47,142 @@
     </script>
   </head>
   <body>
-   
+
     <div class="reveal">
       <div class="slides">
-        <section>Slide 1</section>
-        <section>Slide 2</section>
+        <section>
+          <h2>Praxis LIVE</h2>
+          <p><em>open-source hybrid visual IDE for live creative coding</em></p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Neil C Smith</h2>
+            <p>Artist &amp; Technologist</p>
+            <p>Oxford, UK</p>
+          </section>
+          <section>
+            <p>Worked for 10yrs in web development for culture, education and third-sector</p>
+          </section>
+          <section>
+            <p>Now, freelance in open-source Java technologies</p>
+            <ul>
+              <li>Praxis LIVE</li>
+              <li>GStreamer 1.x bindings</li>
+              <li>JAudioLibs - audio utilities (inc. JNAJack)</li>
+            </ul>
+          </section>
+          <section>
+            <p>Audio-visual performances</p>
+            <p>Generative / interactive spaces and projections</p>
+          </section>
+          <section data-background-image="assets/sound-pool3.jpg" data-background-transition="zoom"></section>
+          <section data-background-image="assets/justitia.jpg" data-background-transition="zoom"></section>
+          <section data-background-image="assets/meeting-pt-1.jpg" data-background-transition="zoom"></section>
+          <section data-background-image="assets/meeting-pt-2.jpg" data-background-size="contain" data-background-transition="zoom"></section>
+          <section data-background-image="assets/meeting-pt-3.jpg" data-background-transition="zoom"></section>
+          <section data-background-image="assets/meeting-pt-4.jpg" data-background-transition="zoom"></section>
+          <section data-background-image="assets/meeting-pt-5.jpg" data-background-transition="zoom"></section>
+          <section data-background-image="assets/col.jpg" data-background-transition="zoom"></section>
+        </section>
+
+
+        <section>
+          <section>
+            <p>hybrid visual IDE for live creative coding</p>
+          </section>
+          <section>
+            <p>hybrid visual IDE <em>and runtime</em> for live creative coding</p>
+          </section>
+          <section>
+            <p>easily create projections, interactive spaces, custom VJ tools, sonic instruments, creative IoT</p>
+            <p>use it as a live digital sketchbook, test out ideas, experiment with code</p>
+          </section>
+          <section data-background-image="assets/PL300.png" data-background-transition="zoom"></section>
+          <section>
+            <h2>Key features</h2>
+            <ul>
+              <li>Intuitive graphical patching</li>
+              <li class="fragment">Extend at runtime</li>
+              <li class="fragment">Real-time audio / video (OpenGL, JACK)</li>
+              <li class="fragment">MIDI, OSC, GUIs, physical computing</li>
+              <li class="fragment">Cross-platform (Windows, MacOS, Linux ... <em>Pi!</em>)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Free and open source</h2>
+            <p>built on top of many great projects, including</p>
+            <ul>
+              <li class="fragment">Processing</li>
+              <li class="fragment">GStreamer 1.x</li>
+              <li class="fragment">NetBeans platform and IDE</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <p>Alt-TAB now!</p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Cyber-physical coding</h2>
+            <p class="fragment">Real-time programming of real-time systems</p>
+            <p class="fragment">Runtime embedded compiler</p>
+          </section>
+          <section>
+            <h2>User code as a first class citizen</h2>
+            <p class="fragment">Turtles all the way down</p>
+            <p class="fragment">No scripting components, complex plugin API, etc.</p>
+            <p class="fragment">Code down to the sample</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Forest of Actors architecture</h2>
+          </section>
+          <section>
+            <img src="assets/graph1.png" />
+          </section>
+          <section>
+            <img src="assets/graph2.png" />
+          </section>
+          <section>
+            <img src="assets/graph3.png" />
+          </section>
+          <section>
+            <img src="assets/graph4.png" />
+          </section>
+          <section>
+            <img src="assets/distributed-hubs.jpg" />
+          </section>
+          <section>
+            <img src="assets/pi.jpg" />
+          </section>
+          
+        </section>
+
+        <section>
+          <p>Funky Origami ...</p>
+        </section>
+
+        <section>
+          <h2>Workshop</h2>
+          <p>Tomorrow, 18:00-20:00</p>
+        </section>
+
+        <section>
+           <h2>Thank you!</h2>
+          <p>www.praxislive.org</p>
+          <p>https://github.com/praxis-live/</p>
+        </section>
+
+
       </div>
     </div>
 
-     <footer>
+    <footer>
       <a href="http://www.praxislive.org"><img src="assets/praxislive.png" /></a>
     </footer>
 
@@ -52,16 +193,16 @@
     <script>
       // More info https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
-          history: true,
-          // More info https://github.com/hakimel/reveal.js#dependencies
-          dependencies: [
-              {src: 'plugin/markdown/marked.js'},
-              {src: 'plugin/markdown/markdown.js'},
-              {src: 'plugin/notes/notes.js', async: true},
-              {src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+        history: true,
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          {src: 'plugin/markdown/marked.js'},
+          {src: 'plugin/markdown/markdown.js'},
+          {src: 'plugin/notes/notes.js', async: true},
+          {src: 'plugin/highlight/highlight.js', async: true, callback: function () {
               hljs.initHighlightingOnLoad();
             }}
-          ]
+        ]
       });
     </script>
   </body>
